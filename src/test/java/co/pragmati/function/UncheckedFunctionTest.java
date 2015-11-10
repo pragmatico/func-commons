@@ -10,4 +10,10 @@ public class UncheckedFunctionTest {
         f.apply("test");
     }
 
+    @Test(expected = RuntimeException.class)
+    public void AndThenthrowRuntimeException() {
+        UncheckedFunction<String, String> func = s -> { return s; };
+        UncheckedFunction<String, String> funcThrows = s -> { throw new UnsupportedOperationException(); };
+        func.andThen(funcThrows).apply("test");
+    }
 }
