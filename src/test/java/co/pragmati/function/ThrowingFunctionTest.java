@@ -9,4 +9,11 @@ public class ThrowingFunctionTest {
         ThrowingFunction<String, String, UnsupportedOperationException> f = s -> { throw new UnsupportedOperationException(); };
         f.apply("test");
     }
+
+    @Test(expected = UnsupportedOperationException.class)
+    public void andThenThrowUnsupportedOperationException() {
+        ThrowingFunction<String, String, UnsupportedOperationException> func = s -> { return s.toString(); };
+        ThrowingFunction<String, String, UnsupportedOperationException> funcThrows = s -> { throw new UnsupportedOperationException(); };
+        func.andThen(funcThrows).apply("test");
+    }
 }
