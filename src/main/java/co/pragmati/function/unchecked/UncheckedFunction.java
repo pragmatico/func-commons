@@ -1,4 +1,4 @@
-package co.pragmati.function;
+package co.pragmati.function.unchecked;
 
 import java.util.function.Function;
 
@@ -16,7 +16,7 @@ public interface UncheckedFunction<T, R> extends Function<T, R> {
     default R apply(T t) {
         try {
             return applyThrows(t);
-        } catch(RuntimeException e) {
+        } catch (RuntimeException e) {
             throw e;
         } catch (Exception e) {
             throw new RuntimeException(e);

@@ -1,8 +1,14 @@
-package co.pragmati.function;
+package co.pragmati.function.throwing;
 
 import org.junit.Test;
 
 public class ThrowingFunctionTest {
+
+    @Test
+    public void runSuccessfully() {
+        ThrowingFunction<String, String, UnsupportedOperationException> f = s -> { return "ok"; };
+        f.apply("test");
+    }
 
     @Test(expected = UnsupportedOperationException.class)
     public void throwUnsupportedOperationException() {
@@ -17,3 +23,4 @@ public class ThrowingFunctionTest {
         func.andThen(funcThrows).apply("test");
     }
 }
+

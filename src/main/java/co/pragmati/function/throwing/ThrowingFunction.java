@@ -1,4 +1,4 @@
-package co.pragmati.function;
+package co.pragmati.function.throwing;
 
 import java.util.Objects;
 import java.util.function.Function;

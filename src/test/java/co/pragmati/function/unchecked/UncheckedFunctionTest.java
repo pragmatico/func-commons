@@ -1,8 +1,14 @@
-package co.pragmati.function;
+package co.pragmati.function.unchecked;
 
 import org.junit.Test;
 
 public class UncheckedFunctionTest {
+
+    @Test
+    public void runSuccessfully() {
+        UncheckedFunction<String, String> f = s -> { return "ok"; };
+        f.apply("test");
+    }
 
     @Test(expected = RuntimeException.class)
     public void throwRuntimeException() {
