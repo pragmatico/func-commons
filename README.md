@@ -5,3 +5,22 @@
 Java 8 common library with extra functions, samples and experiments
 
 
+Collection of "less" functional interfaces that throw exceptions (checked and unchecked)
+
+Functional interfaces throwing checked exceptions
+
++ ThrowingBiConsumer
++ ThrowingBiFunction
++ ThrowingConsumer
++ ThrowingFunction
++ ThrowingPredicate
++ ThrowingSupplier
+
+Functional interfaces throwing unchecked exceptions
+
++ UncheckedBiConsumer
++ UncheckedBiFunction
++ UncheckedConsumer
++ UncheckedFunction
++ UncheckedPredicate
++ UncheckedSupplier
