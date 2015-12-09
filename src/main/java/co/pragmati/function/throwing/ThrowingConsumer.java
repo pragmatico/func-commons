@@ -5,8 +5,10 @@ import java.util.function.Consumer;
 
 /**
  * Consumer that throws exceptions
+ * @param <T>
+ * @param <E>
  *
- * @param <T> the function argument
+ * @author jmbataller
  */
 @FunctionalInterface
 interface ThrowingConsumer<T, E extends Throwable> {

@@ -4,13 +4,15 @@ import java.util.function.Function;
 
 /**
  * Function that throws unchecked exceptions
- *
  * @param <T>
  * @param <R>
+ *
  * @author jmbataller
  */
 @FunctionalInterface
 public interface UncheckedFunction<T, R> extends Function<T, R> {
+
+    R applyThrows(T t) throws Exception;
 
     @Override
     default R apply(T t) {
@@ -22,7 +24,5 @@ public interface UncheckedFunction<T, R> extends Function<T, R> {
             throw new RuntimeException(e);
         }
     }
-
-    R applyThrows(T t) throws Exception;
 }
 

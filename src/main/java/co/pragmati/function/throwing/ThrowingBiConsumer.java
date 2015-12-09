@@ -3,6 +3,14 @@ package co.pragmati.function.throwing;
 import java.util.Objects;
 import java.util.function.BiConsumer;
 
+/**
+ * BiConsumer that throws exceptions
+ * @param <T>
+ * @param <U>
+ * @param <E>
+ *
+ * @author jmbataller
+ */
 @FunctionalInterface
 public interface ThrowingBiConsumer<T, U, E extends Throwable> {
 

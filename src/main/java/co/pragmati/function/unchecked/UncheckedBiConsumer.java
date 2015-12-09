@@ -2,7 +2,16 @@ package co.pragmati.function.unchecked;
 
 import java.util.function.BiConsumer;
 
+/**
+ * BiConsumer that throws unchecked exceptions
+ * @param <T>
+ * @param <U>
+ *
+ * @author jmbataller
+ */
 public interface UncheckedBiConsumer<T, U> extends BiConsumer<T, U> {
+
+    void acceptThrows(T t, U u) throws Exception;
 
     @Override
     default void accept(T t, U u) {
@@ -14,6 +23,4 @@ public interface UncheckedBiConsumer<T, U> extends BiConsumer<T, U> {
             throw new RuntimeException(e);
         }
     }
-
-    void acceptThrows(T t, U u) throws Exception;
 }
