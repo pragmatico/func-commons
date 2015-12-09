@@ -24,3 +24,18 @@ Functional interfaces throwing unchecked exceptions
 + UncheckedFunction
 + UncheckedPredicate
 + UncheckedSupplier
+
+----
+
+Repository with snapshots:
+
+	<repositories>
+	    <repository>
+	        <id>oss-sonatype</id>
+	        <name>oss-sonatype</name>
+	        <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+	        <snapshots>
+	            <enabled>true</enabled>
+	        </snapshots>
+	    </repository>
+	</repositories>
